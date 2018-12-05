@@ -34,15 +34,15 @@ routes(app);
 
 // serve react SPA
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, '../../dist')));
-    const index = path.resolve(__dirname, '../../dist/index.html');
+    app.use(express.static(path.resolve(__dirname, '../dist')));
+    const index = path.resolve(__dirname, '../dist/index.html');
     app.get('*', (req, res) => {
         res.set('Cache-Control', 'private, must-revalidate');
         res.sendFile(index);
     });
 } else {
     console.log('webpack building...');
-    const config = require(path.resolve(__dirname, '../../webpack.dev.js'))(process.env);
+    const config = require(path.resolve(__dirname, '../webpack.dev.js'))(process.env);
     const compiler = require('webpack')(config);
 
     app.use(require('webpack-dev-middleware')(compiler, {
