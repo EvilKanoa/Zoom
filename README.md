@@ -11,6 +11,6 @@ For development:
 For a production ready build and server:
 1. Clone repo.
 2. Copy `.env.sample` into `.env` and configure it as required.
-3. Run `npm install`, then `npm run build`. Static files are ready to be served in the `dist` folder.
-4. Use `npm run prod` to run the production server and serve the `dist` folder.
-
+3. Run `npm install`, then either (a) build the files locally or (b) let the server build the files.
+4a. Use `npm run prod` to build the `dist` folder then run the production server and serve the `dist` folder.
+4b. Use `npm run build` to build the dist folder locally then use `npm run server` to run the production server.
