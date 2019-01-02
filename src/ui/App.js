@@ -1,15 +1,13 @@
-import React, {PureComponent} from 'react';
+import React from 'react';
 
-class App extends PureComponent {
-    render() {
-        return (
-            <div id="app">
-                <div style={{ padding: '4rem', margin: 'auto', textAlign: 'center' }}>
-                    ZOOM App is up and running!
-                </div>
+const App = () => {
+    return (
+        <div id="app">
+            <div style={{ padding: '4rem', margin: 'auto', textAlign: 'center' }}>
+                ZOOM App is up and running!
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default App;
